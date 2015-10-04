@@ -53,6 +53,7 @@
               <failOnViolation>false</failOnViolation>
               <violationSeverity>warning</violationSeverity>
               <includeTestSourceDirectory>false</includeTestSourceDirectory>
+              <excludes>*/**/Draw*</excludes>
             </configuration>
             <goals>
               <goal>check</goal>
