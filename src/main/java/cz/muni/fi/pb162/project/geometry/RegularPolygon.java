@@ -1,5 +1,7 @@
 package cz.muni.fi.pb162.project.geometry;
 
+import cz.muni.fi.pb162.project.geometry.Vertex2D;
+import cz.muni.fi.pb162.project.geometry.Solid;
 
 /**
  * Interface for convex regular polygons, e.g. equilateral triangle, suqare, regular octagon, etc..
