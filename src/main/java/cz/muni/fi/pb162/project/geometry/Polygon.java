@@ -1,7 +1,5 @@
 package cz.muni.fi.pb162.project.geometry;
 
-import cz.muni.fi.pb162.project.geometry.Vertex2D;
-import cz.muni.fi.pb162.project.geometry.Solid;
 
 /**
  * Interface for general polygons including irregular polygons
