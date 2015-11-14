@@ -1,6 +1,5 @@
 package cz.muni.fi.pb162.project.test;
 
-import cz.muni.fi.pb162.project.test.BasicRulesTester;
 import java.io.IOException;
 import java.net.NoRouteToHostException;
 import java.net.UnknownHostException;
@@ -12,7 +11,7 @@ import cz.muni.fi.pb162.project.db.DbException;
 import cz.muni.fi.pb162.project.db.DbUnreachableException;
 import cz.muni.fi.pb162.project.db.MyStorage;
 import cz.muni.fi.pb162.project.db.Storage;
-import cz.muni.fi.pb162.project.db.UnrealibleConnector;
+import cz.muni.fi.pb162.project.db.UnreliableConnector;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -59,7 +58,7 @@ public class ProjectTest {
         
         // test MyStorage with wrong retries
         try {
-	    Storage st = new MyStorage(new UnrealibleConnector(),-1);
+	    Storage st = new MyStorage(new UnreliableConnector(),-1);
 	    fail("Podarilo se vytvorit instanci tridy MyStorage se zapornym" +
 		    " poctem opakovani (retries), aniz by konstruktor vyhodil " +
 		    "vyjimku IllegalArgumentException");
@@ -70,7 +69,7 @@ public class ProjectTest {
 		    e.getMessage().contains("maxAttempts"));
 	}
 	try {
-            Storage st = new MyStorage(new UnrealibleConnector(),0);
+            Storage st = new MyStorage(new UnreliableConnector(),0);
 	    fail("Podarilo se vytvorit instanci tridy MyStorage s nulovym" +
 		    " poctem opakovani (retries), aniz by konstruktor vyhodil " +
 		    "vyjimku IllegalArgumentException");

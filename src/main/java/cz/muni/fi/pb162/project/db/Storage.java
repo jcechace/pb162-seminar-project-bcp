@@ -12,7 +12,7 @@ public interface Storage {
      * Stores data in remote Db server.
      * 
      * @param host Address of remote DB server
-     * @param obj Data to store
+     * @param data Data to store
      * @throws DbUnreachableException if DB is unreachable
      * @throws CannotStoreException if the method failed during the storing data into DB 
      */

@@ -13,11 +13,11 @@ import java.util.Random;
  * @author Tomas Pitner
  * @author Petr Adamek
  */
-public class UnrealibleConnector implements Connector {
+public class UnreliableConnector implements Connector {
 
     Random random = new Random();
     int retries = random.nextInt(10);
-    boolean nrthFailure = false;
+    boolean nthFailure = false;
 
     @Override
     public Connection getConnection(String target)
@@ -26,7 +26,7 @@ public class UnrealibleConnector implements Connector {
         retries--;
         if (retries <= 0) {
             retries = random.nextInt(10);
-            if (nrthFailure = !nrthFailure) {
+            if (nthFailure = !nthFailure) {
                 throw new NoRouteToHostException("No route to " + target
                         + " (counter: " + retries + ").");
             } else {
