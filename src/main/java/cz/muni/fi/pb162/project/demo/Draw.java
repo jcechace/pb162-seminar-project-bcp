@@ -30,7 +30,7 @@ import cz.muni.fi.pb162.project.geometry.LabeledPolygon;
 
 public class Draw extends JFrame {
     
-    private static final String TEST_FILE = "polygon.txt";
+    private static final String TEST_FILE = "/polygon.txt";
     
     /**
      * Znaci polovinu delky usecky pro vykresleni bodu.

@@ -15,8 +15,8 @@ import org.junit.Test;
  */
 public class ProjectTest {
 
-    private static final String TEST_FILE_OK = "pol-ok.txt";
-    private static final String TEST_FILE_ERROR = "pol-error.txt";
+    private static final String TEST_FILE_OK = "/pol-ok.txt";
+    private static final String TEST_FILE_ERROR = "/pol-error.txt";
     private static final String TEST_FILE_OUT = "pol-out.txt";
 
     private InputStream getResource(String path) {
