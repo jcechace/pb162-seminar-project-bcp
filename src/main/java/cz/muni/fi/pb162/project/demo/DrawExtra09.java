@@ -17,8 +17,8 @@ import cz.muni.fi.pb162.project.geometry.LabeledPolygon;
 
 public class DrawExtra09 extends Draw {
     
-    private static final String TEST_FILE = "cz/muni/fi/pb162/project/demo/polygon.bin";
-
+    private static final String TEST_FILE = "polygon.bin";
+/*
     public static void main(String[] args) throws IOException {
         LabeledPolygon pol = new LabeledPolygon();
         pol.addVertex("A", new Vertex2D(-100, -100));
@@ -27,15 +27,16 @@ public class DrawExtra09 extends Draw {
         pol.addVertex("F", new Vertex2D(-100,  100));
         pol.addVertex("B", new Vertex2D(   0,  -20));
         pol.addVertex("E", new Vertex2D(   0,   20));
-        
+
         FileOutputStream fos = new FileOutputStream(TEST_FILE);
         pol.binaryWrite(fos);
         fos.close();
-        
+
         pol = new LabeledPolygon();
         pol.read(new File(TEST_FILE));
         Draw canvas = new Draw();
         canvas.paintLabeledPolygon(pol);
         canvas.startPainting();
     }
+    */
 }

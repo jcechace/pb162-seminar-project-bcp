@@ -15,9 +15,9 @@ import org.junit.Test;
  */
 public class ProjectTest {
 
-    private static final String TEST_FILE_OK = "/data-test/pol-ok.txt";
-    private static final String TEST_FILE_ERROR = "/data-test/pol-error.txt";
-    private static final String TEST_FILE_OUT = "/data-test/pol-out.txt";
+    private static final String TEST_FILE_OK = "pol-ok.txt";
+    private static final String TEST_FILE_ERROR = "pol-error.txt";
+    private static final String TEST_FILE_OUT = "pol-out.txt";
 
     private InputStream getResource(String path) {
         return this.getClass().getResourceAsStream(path);
@@ -64,14 +64,14 @@ public class ProjectTest {
         }
 
         try {
-            pol.write(getResource(TEST_FILE_OUT));
+            pol.write(new FileOutputStream(TEST_FILE_OUT));
         } catch (IOException ex) {
             fail("write(OutputStream) neocekavane vyhodila IOException pro zapisu do souboru: " + ex);
         }
 
         pol = new LabeledPolygon();
         try {
-            pol.read(getResource(TEST_FILE_OUT));
+            pol.read(new FileInputStream(TEST_FILE_OUT));
         } catch (IOException ex) {
             fail("Nedokazi zpetne nacist data zapsana pomoci write(OutputStream), zkontrolujte si soubor "
                 + TEST_FILE_OUT + ": " + ex);
