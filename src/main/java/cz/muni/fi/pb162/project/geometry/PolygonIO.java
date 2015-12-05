@@ -16,7 +16,7 @@ public interface PolygonIO {
      * Write polygon data into output stream.
      *
      * @param os output stream
-     * @throws IOException
+     * @throws IOException on write error
      */
     void write(OutputStream os) throws IOException;
 
@@ -24,21 +24,21 @@ public interface PolygonIO {
      * Write polygon data into file.
      *
      * @param file ouput file
-     * @throws IOException
+     * @throws IOException on write error
      */
     void write(File file) throws IOException;
 
     /**
      * Read polygon data from input stream.
      * @param is input stream
-     * @throws IOException
+     * @throws IOException on read error
      */
     void read(InputStream is) throws IOException;
 
     /**
      * Read polygon data from file.
      * @param file input file
-     * @throws IOException
+     * @throws IOException on read error
      */
     void read(File file) throws IOException;
 }
